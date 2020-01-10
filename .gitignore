@@ -6,5 +6,7 @@
 tree.txt
 _OLD_TODO.md
 
-/config/auth.js
+config/*
 /config/authx.js
+
+yarn.lock
