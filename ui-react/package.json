@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.1",
+    "antd": "3.26.7",
+    "axios": "0.19.1",
     "jquery": "3.2.1",
     "prop-types": "15.6.2",
     "react": "16.0.0",
@@ -19,7 +20,7 @@
     "enzyme": "3.3.0",
     "enzyme-adapter-react-16": "1.1.1",
     "enzyme-to-json": "3.3.4",
-    "jest-extended": "^0.8.1",
+    "jest-extended": "0.8.1",
     "sinon": "6.1.4"
   },
   "scripts": {

@@ -1,38 +1,40 @@
 import React from "react";
 import PropTypes from "prop-types";
 import axios from "axios";
+import ButtonMeeting from "./ButtonMeeting"
 
-const ButtonMeeting = ({ room, details }) => {
-  console.log(room);
-  console.log(details);
-  const buttonTitle = room.Busy ? "Encerrar reunião" : "Nova reunião";
+// const ButtonMeeting = ({ room, details }) => {
+//   console.log(room);
+//   console.log(details);  
 
-  const onActionMeeting = async e => {
-    try {
-      const start = new Date();
-      start.setHours(start.getHours() + 2);
-      const end = new Date();
-      end.setHours(end.getHours() + 3);
-      const location = room.Name;
-      const atendees = [room.Email, "maykon.capellari@db1.com.br"];
-      const subject = "Reunião de Teste";
-      const appointment = { subject, start, end, location, atendees };
-      console.log(appointment);
+//   const onActionMeeting = async e => {
 
-      const rawResp = await axios.post("/api/rooms", appointment);
-      const resp = rawResp.data;
-      console.log(resp);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+//     console.log("PASSOU! MARMARMAR");
+//     // try {
+//     //   const start = new Date();
+//     //   start.setHours(start.getHours() + 2);
+//     //   const end = new Date();
+//     //   end.setHours(end.getHours() + 3);
+//     //   const location = room.Name;
+//     //   const atendees = [room.Email, "maykon.capellari@db1.com.br"];
+//     //   const subject = "Reunião de Teste";
+//     //   const appointment = { subject, start, end, location, atendees };
+//     //   console.log(appointment);
 
-  return (
-    <div>
-      <button onClick={onActionMeeting}>{buttonTitle}</button>
-    </div>
-  );
-};
+//     //   const rawResp = await axios.post("/api/rooms", appointment);
+//     //   const resp = rawResp.data;
+//     //   console.log(resp);
+//     // } catch (err) {
+//     //   console.error(err);
+//     // }
+//   };
+
+//   return (
+//     <div>
+//       <button onClick={onActionMeeting}>{buttonTitle}</button>
+//     </div>
+//   );
+// };
 
 const Details = ({ room, details }) => (
   <div id="single-room__details">
@@ -85,7 +87,7 @@ const RoomStatusBlock = ({ config, details, room }) => (
 
     <ButtonMeeting room={room} details={details} />
     <Details room={room} details={details} />
-    <Time room={room} details={details} />
+    <Time room={room} details={details} />    
     <Organizer room={room} details={details} />
   </div>
 );

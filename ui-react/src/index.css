@@ -4,9 +4,13 @@ body {
   /*font-family: sans-serif;*/
 }
 
-svg {
+/* svg {
   width: 100px;
   height: 100px;
   margin: 20px;
   display:inline-block;
+} */
+
+.ant-modal p {
+  margin: 0;
 }
